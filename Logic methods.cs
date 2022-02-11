@@ -10,6 +10,7 @@ namespace Quiz_Maker2
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
