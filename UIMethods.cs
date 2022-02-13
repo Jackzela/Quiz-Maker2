@@ -26,6 +26,7 @@ namespace Quiz_Maker2
             }
             var questionAndAnswers =Console.ReadLine();
             Console.WriteLine("Write the question separated by|, the right must be followed by*");
+            questionAndAnswerList.Add(questionAndAnswers);//this should add the var questionAndAnswers to the list questionAndAnswersList
                                 }
         /// <summary>
         /// This method should show a random question picked from the questionAndAnswers list

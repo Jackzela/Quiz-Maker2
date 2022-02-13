@@ -17,6 +17,7 @@ namespace Quiz_Maker2
                 string question = "";
                 string answer = "";
                 UIMethods.insertQuestionAndAnswers(question,answer);
+                i = i+1;
             }
         }
         
