@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Quiz_Maker2
 {
-    public class questionAndAnswers
+    public class QuestionAndAnswers
     {
-        string question = "";
-        string answer = "";
-        int number = 0;
+        public string question = "";
+        public string answer = "";
+    
     }
     public class questionAndAnswerslist
     {

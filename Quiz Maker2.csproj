@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Classes.cs" />
     <Compile Include="UIMethods.cs" />
-    <Compile Include="Logic methods.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
