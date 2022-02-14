@@ -8,8 +8,8 @@ namespace Quiz_Maker2
 {
     public class QuestionAndAnswers
     {
-        public string question = "";
-        public string answer = "";
+        public string question ;
+        public List<string> answer ;
     
     }
     public class questionAndAnswerslist

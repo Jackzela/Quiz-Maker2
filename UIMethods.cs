@@ -41,7 +41,12 @@ namespace Quiz_Maker2
             path = @"C:\Users\Giacomo\OneDrive - Quid Servizi\Condivisa\Quid\Db-Pro\test.xml";
             XmlSerializer qnaDeserializer = new XmlSerializer(typeof(List<QuestionAndAnswers>));
             FileStream file =File.OpenRead(path);
-            return QuestionAndAnswers;
+            for (int i=0; i<5; i++)
+            {
+                
+                Console.WriteLine(file[i]);
+            }
+           
 
 
         }
