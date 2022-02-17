@@ -12,10 +12,7 @@ namespace Quiz_Maker2
         public List<string> answer ;
     
     }
-    public class questionAndAnswerslist
-    {
-        int[] questionAndAnswers;
-    }
+
     internal class Classes
     {
     }
