@@ -39,12 +39,12 @@ namespace Quiz_Maker2
         private static List <QuestionAndAnswers> read(string path)
         {
             var questionsList = new XmlSerializer (typeof(QuestionAndAnswers));//Creating the instance of the XmlSerialize with the object's type that will be Deserialized
-            using (var file = new FileStream(@"C:\Users\Giacomo\OneDrive - Quid Servizi\Condivisa\Quid\Db-Pro\test.xml"))
+            using (var file = new FileStream(@"C:\Users\Giacomo\OneDrive - Quid Servizi\Condivisa\Quid\Db-Pro\test.xml", FileMode.Open))
             {
 
             }
                 // Calling the Deserialize method and cast to the object type.
-            var questionAndAnswers = (QuestionAndAnswers)mySerializer.Deserialize(file);// Calling the Deserialize method and cast to the object type.
+            var questionAndAnswers = (List<QuestionAndAnswers>)mySerializer.Deserialize(file);// Calling the Deserialize method and cast to the object type.
             return questionAndAnswers;
 
         }
