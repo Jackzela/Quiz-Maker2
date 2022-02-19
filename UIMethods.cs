@@ -8,8 +8,10 @@ using System.Xml.Serialization;
 
 namespace Quiz_Maker2
 {
+    
     internal class UIMethods
     {
+       for (int i=0)
         /// <summary>
         /// This method take the question and serialize it
         /// </summary>
@@ -19,34 +21,14 @@ namespace Quiz_Maker2
         {
             var path = @"C:\Users\Giacomo\OneDrive - Quid Servizi\Condivisa\Quid\Db-Pro\test.xml";
             List<QuestionAndAnswers> questionAndAnswersList = new List<QuestionAndAnswers>();
-            Save(path, questionAndAnswersList);
+            Program.Save(path, questionAndAnswersList);
 
             QuestionAndAnswers questionAndAnswers = new QuestionAndAnswers();
-            questionAndAnswers.question = Console.ReadLine();
             Console.WriteLine("Write the question separated by|, the right must be followed by*");
+            questionAndAnswers.question = Console.ReadLine();
             questionAndAnswersList.Add(questionAndAnswers);//this should add the var questionAndAnswers to the array questionAndAnswersList
         }
 
 
-        private static void Save(string path, List<QuestionAndAnswers> questionAndAnswersList)
-        {
-            XmlSerializer qnaSerializer = new XmlSerializer(typeof(List<QuestionAndAnswers>));
-
-            FileStream file = File.Create(path);
-            qnaSerializer.Serialize(file, questionAndAnswersList);
-            file.Close();
-        }
-        private static List <QuestionAndAnswers> read(string path)
-        {
-            var questionsList = new XmlSerializer (typeof(QuestionAndAnswers));//Creating the instance of the XmlSerialize with the object's type that will be Deserialized
-            using (var file = new FileStream(@"C:\Users\Giacomo\OneDrive - Quid Servizi\Condivisa\Quid\Db-Pro\test.xml", FileMode.Open))
-            {
-
-            }
-                // Calling the Deserialize method and cast to the object type.
-            var questionAndAnswers = (List<QuestionAndAnswers>)mySerializer.Deserialize(file);// Calling the Deserialize method and cast to the object type.
-            return questionAndAnswers;
-
-        }
     }
 }
