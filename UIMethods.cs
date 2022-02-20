@@ -17,7 +17,7 @@ namespace Quiz_Maker2
         /// </summary>
         /// <param name="question"></param>
         /// <param name="answer"></param>
-        public static void insertQuestionAndAnswers(string question, string answer)
+        public static void InsertQuestionAndAnswers(string question, string answer)
         {
             List<QuestionAndAnswers> questionAndAnswersList = new List<QuestionAndAnswers>();
 
