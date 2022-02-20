@@ -20,9 +20,6 @@ namespace Quiz_Maker2
         public static void InsertQuestionAndAnswers(string question, string answer)
         {
             List<QuestionAndAnswers> questionAndAnswersList = new List<QuestionAndAnswers>();
-
-           var path = @"C:\Users\Giacomo\OneDrive - Quid Servizi\Condivisa\Quid\Db-Pro\test.xml";
-           Program.Save(path, questionAndAnswersList);
             var q =new QuestionAndAnswers();
             Console.WriteLine("Write the question!");
             q.question = Console.ReadLine();
@@ -33,7 +30,7 @@ namespace Quiz_Maker2
                 q.answer.Add(answers);
                 questionAndAnswersList .Add(q);
             }
-            Program.Save(path, questionAndAnswersList);
+         
         }
 
 
