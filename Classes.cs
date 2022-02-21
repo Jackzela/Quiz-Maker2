@@ -10,7 +10,7 @@ namespace Quiz_Maker2
     {
         public string question ;
         public List<string> answer ;
-    
+        public int numberRightAnswer;
     }
 
     internal class Classes

@@ -13,6 +13,10 @@ namespace Quiz_Maker2
 
         static void Main(string[] args)
         {
+            List<QuestionAndAnswers> qAList = new List<QuestionAndAnswers>();
+            QuestionAndAnswers newQNA;
+            newQNA = UIMethods.InsertQuestionAndAnswers();
+            qAList.Add(newQNA);
 
         }
 
