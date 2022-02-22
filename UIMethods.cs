@@ -11,7 +11,21 @@ namespace Quiz_Maker2
     
     internal class UIMethods
     {
- 
+        public static void ShowTheQuestionAndAnswers(QuestionAndAnswers questionToShow)
+        {
+            Console.WriteLine($"{questionToShow.question}");
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine($"{questionToShow.answer[i]}");
+            }
+
+        }
+        public static void asktheanswer (QuestionAndAnswers theanswer)
+        {
+            int theanswer = Console.ReadLine();
+
+        }
+        
         /// <summary>
         /// This method take the question and answers from the user and ask to him wich is the right one
         /// </summary>
@@ -35,11 +49,5 @@ namespace Quiz_Maker2
             return q;
         }
     }
-    public static QuestionAndAnswers ShowTheQuestionAndAnswers(List<QuestionAndAnswers> questionToShow)
-    {
-       var questionToShowList = new List<QuestionAndAnswers>();
-        questionToShowList = Program.Read(questionAndAnswers);
-        for (int i = 0; i < questionToShowList.Count; i++)
-        Console.WriteLine ($@questionToShowList[i].question);
-    }
+
 }
