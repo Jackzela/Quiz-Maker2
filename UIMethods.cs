@@ -20,10 +20,16 @@ namespace Quiz_Maker2
             }
 
         }
-        public static void asktheanswer (QuestionAndAnswers theanswer)
+        public bool askTheAnswer (QuestionAndAnswers rightanswer,int useranswer)
         {
-            int theanswer = Console.ReadLine();
-
+            Console.WriteLine("Choose the answer");
+            string theAnswerString = Console.ReadLine();
+            int theAnswerInt = int.Parse(theAnswerString);
+            if (theAnswerInt == QuestionAndAnswers.numberRightAnswer)
+            {
+                Console.WriteLine("You win!");
+            }
+            return 
         }
         
         /// <summary>
