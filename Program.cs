@@ -22,14 +22,14 @@ namespace Quiz_Maker2
                 qAList.Add(newQNA);
                 Save(@"C:\test.xml", qAList);
             }
+            string path = "C:\test.xml";
+           var question= Read(path);
             Console.WriteLine("Answer to the questions!");
             for (int i = 0; i < 3; i++)
             {
-                Console.(UIMethods.ShowTheQuestionAndAnswers);
+             UIMethods.ShowTheQuestionAndAnswers(qAList[i]);
             }
-
-                
-
+            UIMethods.AskTheAnswer(qAList,);
         }
 
         public static void Save(string path, List<QuestionAndAnswers> questionAndAnswersList)
