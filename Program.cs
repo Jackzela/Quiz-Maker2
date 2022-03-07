@@ -13,23 +13,24 @@ namespace Quiz_Maker2
 
         static void Main(string[] args)
         {
-           
+            string path = @"C:\temp\test.xml";
             List<QuestionAndAnswers> qAList = new List<QuestionAndAnswers>();
             QuestionAndAnswers newQNA;
             for (int i = 0; i < 3; i++)
             {
                 newQNA = UIMethods.InsertQuestionAndAnswers();
                 qAList.Add(newQNA);
-                Save(@"C:\test.xml", qAList);
+                newQNA.Test();
+                Save(path, qAList);
             }
-            string path = "C:\test.xml";
-           var question= Read(path);
-            Console.WriteLine("Answer to the questions!");
+
+            var questions = Read(path);
+
             for (int i = 0; i < 3; i++)
             {
-             UIMethods.ShowTheQuestionAndAnswers(qAList[i]);
+                UIMethods.ShowTheQuestionAndAnswers(qAList[i]);
+                UIMethods.AskTheAnswer(qAList[i]);
             }
-            UIMethods.AskTheAnswer(qAList,);
         }
 
         public static void Save(string path, List<QuestionAndAnswers> questionAndAnswersList)
@@ -44,7 +45,7 @@ namespace Quiz_Maker2
         {
             using (FileStream file = new FileStream(path, FileMode.Open))
             {
-                var mySerializer = new XmlSerializer(typeof(QuestionAndAnswers));
+                var mySerializer = new XmlSerializer(typeof(List<QuestionAndAnswers>));
                 var questionAndAnswers = (List<QuestionAndAnswers>)mySerializer.Deserialize(file);// Calling the Deserialize method and cast to the object type.
                 return questionAndAnswers;
             }

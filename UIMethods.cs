@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 
 namespace Quiz_Maker2
 {
-    
+
     internal class UIMethods
     {
         public static void ShowTheQuestionAndAnswers(QuestionAndAnswers questionToShow)
@@ -20,20 +20,28 @@ namespace Quiz_Maker2
             }
 
         }
-        public bool AskTheAnswer (QuestionAndAnswers qna,int userAnswer)
+        public static bool AskTheAnswer(QuestionAndAnswers qna)
         {
-            
+
             bool answer = false;
             Console.WriteLine("Choose the answer");
             string theAnswerString = Console.ReadLine();
-            userAnswer = int.Parse(theAnswerString);
+            int userAnswer = int.Parse(theAnswerString);
             if (userAnswer == qna.numberRightAnswer)
             {
-               answer = true;
+                answer = true;
             }
             return answer;
+            if (answer == true)
+            {
+                Console.WriteLine("Right!");
+            }
+            else
+            {
+                Console.WriteLine("Wrong!");
+            }
         }
-        
+
         /// <summary>
         /// This method take the question and answers from the user and ask to him wich is the right one
         /// </summary>
@@ -41,7 +49,7 @@ namespace Quiz_Maker2
         /// <param name="answer"></param>
         public static QuestionAndAnswers InsertQuestionAndAnswers()
         {
-            var q =new QuestionAndAnswers();
+            var q = new QuestionAndAnswers();
             Console.WriteLine("Write the question!");
             q.question = Console.ReadLine();
             for (int i = 0; i < 3; i++)
