@@ -20,7 +20,6 @@ namespace Quiz_Maker2
             {
                 newQNA = UIMethods.InsertQuestionAndAnswers();
                 qAList.Add(newQNA);
-                newQNA.Test();
                 Save(path, qAList);
             }
 

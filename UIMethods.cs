@@ -31,7 +31,7 @@ namespace Quiz_Maker2
             {
                 answer = true;
             }
-            return answer;
+
             if (answer == true)
             {
                 Console.WriteLine("Right!");
@@ -40,6 +40,7 @@ namespace Quiz_Maker2
             {
                 Console.WriteLine("Wrong!");
             }
+            return answer;
         }
 
         /// <summary>
